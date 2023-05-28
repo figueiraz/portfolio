@@ -329,7 +329,7 @@ body {
 .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
+  background: #f5f5f5;
   white-space: nowrap;
   position: relative;
 }
