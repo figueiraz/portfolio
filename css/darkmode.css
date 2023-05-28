@@ -1,0 +1,92 @@
+/* MUDANÇA DE CORES DARK-MODE */
+body.dark {
+  background: #252525;
+}
+
+.dark #btn-mobile {
+  color: whitesmoke;
+}
+
+@media (max-width: 600px) {
+  .dark #menu {
+  background-color: #333;
+  box-shadow: 0px 10px 50px -15px rgba(20, 20, 20, 0.851);
+}
+}
+
+.dark #menu a {
+  color: whitesmoke;
+  transition: 0.3s;
+}
+
+.dark #menu a:hover {
+  text-decoration: none;
+  color: orangered;
+}
+
+.dark #header {
+  background-color: rgb(20, 20, 20, 0.18);
+  color: whitesmoke;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+.dark a {
+  color: whitesmoke;
+}
+
+.dark a:hover {
+  color: blue;
+}
+
+.dark header h1 {
+  color: whitesmoke;
+}
+
+.dark .ag-courses_item {
+  background-color: #252525;
+}
+
+.dark .ag-courses-item_title {
+  color: #fff;
+}
+
+.dark .ag-courses_item {
+  background-color: #252525;
+  box-shadow: 0px 0px 20px 0px #181818;
+}
+
+.dark footer {
+  color: aliceblue;
+}
+
+.dark::-webkit-scrollbar-track {
+  background-color: #252525;
+}
+
+.dark .ola {
+  color: whitesmoke;
+}
+
+.dark .logos {
+  background-color: #252525;
+}
+
+.dark .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), #252525); 
+}
+
+.dark .logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #252525); 
+}
+
+.dark .tranding-slider-control .slider-arrow {
+  background: #222222;
+}
+
+.dark .tranding-slider-control .slider-arrow ion-icon {
+  color: #fff;
+}

@@ -1,0 +1,254 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orangered;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(238, 104, 55);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f3f3;
+}
+
+
+::-webkit-scrollbar-track:hover {
+  background-color: #fff;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: orangered;
+}
+
+#logo {
+  background-image: url('Gpreto.png');
+}
+
+#nav {
+  display: flex;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+.label {
+  position: absolute;
+  right: 0;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 15px rgb(29, 29, 29);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+#header img {
+  max-height: 55px;
+}
+
+.headersvg {
+  display: flex;
+  flex-direction: column;
+}
+
+.svgtop {
+  margin-top: 0px;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+}
+
+#menu a {
+  display: block;
+  padding: .5rem;
+}
+
+#btn-mobile {
+  display: none;
+  color: black;
+  border: .1rem solid black;
+  padding: .1rem;
+}
+
+@media (max-width: 600px) {
+  #btn-mobile {
+    display: block;
+  }
+
+  #nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 150px;
+  }
+
+  #header {
+    justify-content: space-between;
+  }
+
+  #menu {
+    position: absolute;
+    width: 50%;
+    top: 70px;
+    right: 0;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    height: 0;
+    z-index: 1000;
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+    box-shadow: 0px 10px 50px -15px rgba(255, 255, 255, 0.851);
+  }
+
+  #nav.active #menu {
+    display: block;
+    visibility: visible;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0.5rem;
+    color: rgb(0, 0, 0);
+  }
+
+  #menu a:hover {
+    color: orangered;
+    text-decoration: none;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    gap: .5rem;
+  }
+
+  #hambuguer {
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hambuguer::before,
+  #hambuguer::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hambuguer {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hambuguer::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hambuguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+
+
+
+/* CONFIGS BOTÃO DARK */
+.checkbox {
+  opacity: 0;
+  position: relative;
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+  /* DEIXAR DO LADO DIREITO */
+  margin-left: auto;
+  margin-right: 50px;
+  /* ---------------------- */
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f3f3f3;
+}
+
+.fa-sun {
+  color: #f3f3f3;
+}
+
+@media screen and (max-width: 768px) {
+  .label {
+    transform: scale(1.1);
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .label {
+    transform: scale(1.1);
+    margin-right: 60px;
+  }
+
+  html:focus,
+  html:active {
+    outline: 0 !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
