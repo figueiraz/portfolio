@@ -372,6 +372,13 @@ body {
   margin: 0 40px;
 }
 
+@media (max-width:570px) {
+  .logos-slide {
+    display: inline-block;
+    animation: 25s slide infinite linear;
+  }
+}
+
 /* --------------------------------------------- */
 
 .container {
